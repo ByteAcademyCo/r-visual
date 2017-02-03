@@ -85,7 +85,37 @@ You might also want to add a box frame for the visualizations with:
 box()
 ```
 
+## 2.0 ggvis
+
+[ggvis](http://ggvis.rstudio.com/) allows you to visualize interactive plots from the makers of ggplot2.
+
+``` python
+library(ggvis)
+iris %>% ggvis(~Petal.Length, ~Petal.Width, fill = ~Species) %>% layer_points()
+```
+
+## 3.0 ggplot2
+
+[ggplot2](http://www.statmethods.net/advgraphs/ggplot2.html) is one of the best static visualization packages in R. 
+
+
+## 4.0 heatmaply
+[heatmaply](https://mran.revolutionanalytics.com/package/heatmaply/) produces interactive heatmaps.
+
+``` python
+library(heatmaply)
+heatmaply(cor(mtcars), 
+k_col = 2, k_row = 2,
+limits = c(-1,1)) %>% 
+layout(margin = list(l = 40, b = 40))
+```
+
+## 5.0 plotly
+
+[plotly](https://plot.ly/r/) allows you to convert ggplot2 figures to interactive plots easily.
+
 ## 5.0 Final Words
+
 
 ### 5.1 Resources
 
